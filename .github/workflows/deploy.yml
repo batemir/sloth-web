@@ -21,7 +21,5 @@ jobs:
       - run: mkdir "$HOME/.ssh"
       - run: echo "${{ secrets.DEPLOY_KEY }}" > "$HOME/.ssh/key"
       - run: chmod 600 "$HOME/.ssh/key"
-      # Build
-      - run: npm ci
       # Deploy
       - run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@31.184.253.226:/var/www/sloth-web-frontend
