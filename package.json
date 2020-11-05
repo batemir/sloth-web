@@ -4,7 +4,8 @@
   "description": "web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/batemir/sloth-web-frontend/issues"
   },
-  "homepage": "https://github.com/batemir/sloth-web-frontend#readme"
+  "homepage": "https://github.com/batemir/sloth-web-frontend#readme",
+  "devDependencies": {
+    "css-loader": "5.0.1",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.0.0-alpha.10",
+    "style-loader": "2.0.0",
+    "webpack": "5.4.0",
+    "webpack-cli": "4.2.0"
+  },
+  "dependencies": {
+    "reset-css": "5.0.1"
+  }
 }
